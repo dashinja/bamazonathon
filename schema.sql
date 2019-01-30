@@ -1,6 +1,6 @@
 -- DROP DATABASE IF EXISTS bamazon_db;
 
-CREATE DATABASE bamazon_db;
+-- CREATE DATABASE bamazon_db;
 
 USE bamazon_db;
 
@@ -34,6 +34,6 @@ VALUES ("Great 1/4 Inch Pluggable JBL Sound System", "Electronics", 300, 10);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Wireless Keyboard", "Electronics", 40, 10);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Wireless Mouse", "Electronics", 32, 10)
+VALUES ("Wireless Mouse", "Electronics", 32, 10);
 
-SELECT * FROM products;
+-- SELECT * FROM products;
