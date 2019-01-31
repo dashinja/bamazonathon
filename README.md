@@ -10,6 +10,7 @@ Have fun with the name while you shop.
 
  Get all your computer stock here...
  There's even rumor you can buy an android...
+ [Exclusive Seller/Easter Egg here...](https://youtu.be/-frT6YSmRKo)
 
 The featured app is made in such a ways as to be self-explanatory -
 but if you really want to be boring and watch other people have fun instead:
