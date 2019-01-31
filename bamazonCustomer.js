@@ -78,7 +78,7 @@ function buyStuff() {
           options,
           (error, results, fields) => {
             if (error) throw error
-            updateSalesProgress()
+            updateSalesProgress(purchaseId, purchaseAmount, purchasePrice)
             justMakeItStaup()
           }
         )
@@ -89,12 +89,13 @@ function buyStuff() {
     })
 }
 
-const updateSalesProgress = function() {
-  let saleTotal = purchaseAmount * purchasePrice
-  console.log(saleTotal)
+const updateSalesProgress = function(id, amount, price) {
+  let saleTotal = amount * price
+  console.log("I'm saleTotal, amount times price: ", saleTotal)
   productSales += saleTotal
+  console.log("")
   let myQuery = 'UPDATE products SET product_sales = ? WHERE item_id = ?'
-  let options = [productSales, purchaseId]
+  let options = [productSales, id]
 
   connection.query(myQuery, options, (err, res) => {
     console.log('Product Sales Total Updated...')
