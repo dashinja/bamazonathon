@@ -17,6 +17,8 @@ connection.connect(err => {
   startUp()
 })
 
+let productSales = 0
+
 // Show products to user
 const startUp = function() {
   console.log(`Here are our products...\n`)
@@ -51,9 +53,10 @@ function buyStuff() {
     ])
     .then(answers => {
       // Hooray unnecessary convenience!!
-      purchaseId = parseInt(answers.purchase_id) - 1
-      purchaseAmount = parseInt(answers.purchase_amount)
-      databaseAmount = data[purchaseId].stock_quantity
+      let purchaseId = parseInt(answers.purchase_id) - 1
+      let purchaseAmount = parseInt(answers.purchase_amount)
+      let databaseAmount = data[purchaseId].stock_quantity
+      let purchasePrice = parseInt(data[purchaseId].price) * purchaseAmount
 
       if (purchaseAmount > databaseAmount) {
         console.log(
@@ -75,6 +78,7 @@ function buyStuff() {
           options,
           (error, results, fields) => {
             if (error) throw error
+            updateSalesProgress()
             justMakeItStaup()
           }
         )
@@ -83,6 +87,18 @@ function buyStuff() {
     .catch(err => {
       return console.log(err)
     })
+}
+
+const updateSalesProgress = function() {
+  let saleTotal = purchaseAmount * purchasePrice
+  console.log(saleTotal)
+  productSales += saleTotal
+  let myQuery = 'UPDATE products SET product_sales = ? WHERE item_id = ?'
+  let options = [productSales, purchaseId]
+
+  connection.query(myQuery, options, (err, res) => {
+    console.log('Product Sales Total Updated...')
+  })
 }
 
 const justMakeItStaup = function() {
