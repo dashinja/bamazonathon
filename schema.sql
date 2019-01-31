@@ -1,6 +1,6 @@
--- DROP DATABASE IF EXISTS bamazon_db;
+DROP DATABASE IF EXISTS bamazon_db;
 
--- CREATE DATABASE bamazon_db;
+CREATE DATABASE bamazon_db;
 
 USE bamazon_db;
 
@@ -36,4 +36,6 @@ VALUES ("Wireless Keyboard", "Electronics", 40, 10);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Wireless Mouse", "Electronics", 32, 10);
 
--- SELECT * FROM products;
+-- -- SELECT * FROM products;
+
+-- -- SELECT stock_quantity FROM products WHERE item_id = 2
