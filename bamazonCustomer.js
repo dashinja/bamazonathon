@@ -15,7 +15,6 @@ connection.connect(err => {
   console.log(`Connected with id: ${connection.threadId}\n`)
 
   startUp()
-  // connection.end()
 })
 
 // Show products to user
