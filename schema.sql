@@ -13,6 +13,22 @@ stock_quantity INT NOT NULL,
 PRIMARY KEY (item_id)
 );
 
+ALTER TABLE products
+  ADD product_sales DECIMAL(8,2) NOT NULL
+  AFTER price;
+
+SELECT * FROM products;
+
+CREATE TABLE departments (
+dep_id INT NOT NULL AUTO_INCREMENT,
+dep_name VARCHAR(50) NOT NULL,
+dep_over_head_cost INT,
+PRIMARY KEY (dep_id)
+);
+
+SELECT * FROM departments;
+
+
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("LG 29 inch 21:9 Monitor", "Electronics", 540, 10);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
