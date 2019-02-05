@@ -12,10 +12,10 @@ Have fun with the name while you shop.
  There's even rumor you can buy an android...
  [Exclusive Seller/Easter Egg here...](https://youtu.be/-frT6YSmRKo)
 
-The featured app is made in such a ways as to be self-explanatory -
+The featured app is made in such a way as to be self-explanatory -
 but if you really want to be boring and watch other people have fun instead:
 
-[Checkout BAMAZON! on Youtube](https://www.youtube.com/watch?v=15qyeiT_MQg&feature=youtu.be)
+[Checkout BAMAZONATHON! on Youtube](https://www.youtube.com/watch?v=15qyeiT_MQg&feature=youtu.be)
 
 Everyone knows how to follow instructions, right?!
 The menu guides you, the prompts...well... prompt you!
