@@ -60,15 +60,11 @@ const showAllTheThings = function() {
     (err, res) => {
       if (err) throw err
       console.table(res)
-      // console.log(breakage)
       setTimeout(() => {
         justMakeItStaup()
       }, 2 * 1000)
     }
   )
-  // .catch(function(err) {
-  //   console.log(err)
-  // })
 }
 
 const showTheLowThings = function() {
@@ -76,13 +72,11 @@ const showTheLowThings = function() {
     'SELECT item_id, product_name, price, stock_quantity FROM products WHERE stock_quantity < 5',
     (err, res) => {
       console.table(res)
-      // console.log(breakage)
       setTimeout(() => {
         justMakeItStaup()
       }, 2 * 1000)
     }
   )
-  // .catch(err => console.log(err))
 }
 
 const showTheLowThingsManual = function() {
@@ -92,7 +86,6 @@ const showTheLowThingsManual = function() {
       console.table(res)
     }
   )
-  // .catch(err => console.log(err))
 }
 const addToTheThings = function() {
   showTheLowThingsManual()
@@ -184,12 +177,6 @@ let addCompletelyNewThing = function() {
       let myQuery =
         'INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES (?, ?, ?, ?)'
 
-      let options = {
-        product_name: answers.product_name,
-        department_name: answers.dep_name,
-        price: parseInt(answers.product_price),
-        stock_quantity: parseInt(answers.stockAmount)
-      }
       let options2 = [
         answers.product_name,
         answers.dep_name,
