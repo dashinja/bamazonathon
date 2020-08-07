@@ -20,7 +20,7 @@ but if you really want to be boring and watch other people have fun instead:
 Everyone knows how to follow instructions, right?!
 The menu guides you, the prompts...well... prompt you!
 
-And when you leave, there's even a nice tid bit for your there.
+And when you leave, there's even a nice tid bit for you there.
 
 Enjoy!
 
